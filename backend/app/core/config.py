@@ -2,6 +2,6 @@ from typing import List
 
 class Settings:
     PROJECT_NAME: str = "Chatbot API"
-    ALLOWED_ORIGINS: List[str] = ["https://cbot-ui.onrender.com"]
+    ALLOWED_ORIGINS: List[str] = ["https://c-bot-ui.onrender.com"]
 
 settings = Settings()
