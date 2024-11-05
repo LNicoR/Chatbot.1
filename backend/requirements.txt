@@ -3,5 +3,3 @@ uvicorn
 pydantic
 fastapi-cors
 uvicorn
-re
-random
