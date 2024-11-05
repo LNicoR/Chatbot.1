@@ -8,7 +8,7 @@ app = FastAPI()
 # Configurar CORS para permitir el frontend (React)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Cambia al dominio donde alojes el frontend
+    allow_origins=["https://cbot-ui.onrender.com"],  # Cambia al dominio donde alojes el frontend
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
