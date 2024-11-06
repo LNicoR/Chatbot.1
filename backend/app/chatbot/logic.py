@@ -91,7 +91,22 @@ def check_all_message(message):
         single_response=True
     )
     response(
-        "Contamos con sedes en Bogotá, Villavicencio y Formación virtual. ¿En cuél tienes interés?",
+        "Puedes consultar el reglamento estudiantil en: https://ucompensar.edu.co/wp-content/uploads/2023/08/Reglamento-estudiantil-v2.pdf",
+        ['estudiantil','reglamento'],
+        single_response=True
+    )
+    response(
+        "Puedes consultar el reglamento docente en: https://ucompensar.edu.co/wp-content/uploads/2022/07/Reglamento-Docente-ucompensar.pdf",
+        ['docente','reglamento'],
+        single_response=True
+    )
+    response(
+        "Puedes consultar el Proyecto Educativo Institucional en: https://ucompensar.edu.co/wp-content/uploads/2021/06/PEI_Proyecto_Educativo_Institucional.pdf",
+        ['proyecto','educativo','institucional','pei'],
+        single_response=True
+    )
+    response(
+        "Contamos con sedes en Bogotá, Villavicencio y Formación virtual. ¿En cuál tienes interés?",
         ['sedes', 'dirección', 'ubicados', 'queda','ubicada'],
         single_response=True
     )
@@ -118,6 +133,30 @@ def check_all_message(message):
     response(
         "Consulta la normatividad institucional en: https://ucompensar.edu.co/documentos-de-interes/",
         ['normatividad', 'institucional', 'consulta'],
+        single_response=True
+    )
+    response(
+        "Consulta aquí las diferentes opciones de financiación: https://ucompensar.edu.co/zona-financiera/opciones-de-financiacion/",
+        ['financiar', 'financiación', 'financiamiento','financiacion', 'prestamo', 'icetex','préstamos', 'prestamos', 'descuentos','compensar'],
+        single_response=True
+    )
+    response(
+        "Nuestras publicaciones destacadas son: <ul> <li>Sistemas Logísticos en la comercialización de productos agrícolas basados en la industria 4.0</li> <li>Creatividad y Design Thinking</li></ul>",
+        ['publicaciones','destacadas','importantes']
+    )
+    response(
+        "Consulta aquí toda la información acerca de semilleros de investigación: https://ucompensar.edu.co/semilleros/",
+        ["semilleros","semillero"],
+        single_response=True
+    )
+    response(
+        "La Investigación en la Fundación Universitaria Compensar se concentra en el desarrollo de actividades de ciencia, tecnología e innovación, siguiendo un enfoque aplicado; basadas en la generación de soluciones pertinentes para el sector productivo, organizaciones y comunidades, en permanente escucha de sus necesidades que son el pilar de nuestro relacionamiento Universidad – Empresa y que activan los distintos escenarios de investigación aplicada tanto por parte de los grupos de investigación como para la investigación formativa.",
+        ['investigación','investigacion'],
+        single_response=True
+    )
+    response(
+        "Cacharreando es un programa de radio dedicado a la investigación en UCompensar. Esta iniciativa, materializada en 2023 por los líderes de los grupos de investigación, busca compartir con la comunidad académica los avances y novedades de la investigación en UCompensar. Te invitamos a conocer CACHARREANDO a través de su micrositio en nuestro campus virtual.",
+        ['cacharreando'],
         single_response=True
     )
     response(
@@ -161,7 +200,7 @@ def check_all_message(message):
         single_response=True
     )
     response(
-        "Consultainformación sobre el nuevo campus en: https://nuevocampus.ucompensar.edu.co",
+        "Consulta información sobre el nuevo campus en: https://nuevocampus.ucompensar.edu.co",
         ['nuevo', 'campus'],
         single_response=True
     ) 
