@@ -7,7 +7,7 @@ app = FastAPI()
 # Configuración de CORS para permitir el frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Cambia esto si alojas en otro dominio
+    allow_origins=["https://cbot-lemon.vercel.app/", "http:localhost:3000"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
