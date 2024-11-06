@@ -7,8 +7,7 @@ app = FastAPI()
 origins = [
     "http://localhost:3000",
     "https://cbot-lemon.vercel.app",
-    "https://cbot-git-main-c4rlos9559s-projects.vercel.app",
-    "https://cbot-6kgnaeb9m-c4rlos9559s-projects.vercel.app",
+    "https://cbot-ui.vercel.app/",
 
 ]
 # Configuración de CORS para permitir el frontend
