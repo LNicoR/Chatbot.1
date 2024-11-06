@@ -88,7 +88,7 @@ def check_all_message(message):
         single_response=True
     )
     response(
-        "Tenemos diferentes programas ¿Cuál es de tu interés (pregrado/postgrado)?",
+        "Tenemos diferentes programas ¿Cuál es de tu interés (pregrado o postgrado)?",
         ['programas', 'carreras'],
         single_response=True
     )
@@ -98,86 +98,93 @@ def check_all_message(message):
         single_response=True
     )
     response(
-        "Tenemos diferentes programas de pregrado y postgrado en nuestras modalidades. ¿En qué modalidad estás interesado?",
+        "Nuestros programas de postgrado son: Especialización en Gerencia para el Desarrollo del Talento (Postgrado-Virtual), Especialización en Contabilidad y Auditoría en Entornos Digitales (Postgrado-Virtual), Especialización en Experiencia y Servicio al Cliente (Postgrado-Virtual), Especialización en Contabilidad y Auditoría en Entornos Digitales (Postgrado-Bogotá), Especialización en Análisis y Planeación Estratégica de Medios (Postgrado-Bogotá), Especialización en Narrativas y Lenguajes Digitales (Postgrado-Bogotá y Virtual), Especialización en Finanzas (Postgrado-Presencial y Virtual), Especialización en Inteligencia y Prospectiva de Negocios (Postgrado-Presencial y Virtual), Especialización en Seguridad Informática (Postgrado-Bogotá), Especialización en Gerencia de la Comunicación Estratégica (Postgrado-Bogotá y Virtual), Especialización en Seguridad y Salud en el Trabajo (Postgrado-Bogotá y Virtual), Especialización en Big Data (Postgrado-Bogotá y Virtual), ",
         ['postgrado', 'carreras', 'programas'],
         single_response=True
     )
     response(
         "Aquí tienes nuestro enlace a la página web: https://ucompensar.edu.co/",
         ['pagina', 'web', 'enlace', 'sitio'],
-        gif_url="https://tenor.com/es/view/giffany-gravity-falls-gif-sprite-book-of-bill-gif-12544109780257466418",
         single_response=True
     )
     response(
         "Contamos con sedes en Bogotá, Villavicencio y Formación virtual. ¿En cuél tienes interés?",
-        ['sedes', 'dirección'],
-        gif_url="https://tenor.com/es/view/giffany-gravity-falls-gif-sprite-book-of-bill-gif-12544109780257466418",
+        ['sedes', 'dirección', 'ubicados', 'queda','ubicada'],
         single_response=True
     )
     response(
         "Nuestra sede Teusaquillo en Bogotá, se encuentra ubicada en Avenida (Calle) 32 No. 17-30. Teléfono aspirantes: 601 3380666. WhatsApp: (+57) 3173002952",
-        ['bogotá', 'sede', 'dirección'],
-        gif_url="https://tenor.com/es/view/giffany-gravity-falls-gif-sprite-book-of-bill-gif-12544109780257466418",
+        ['bogotá', 'sede', 'dirección', 'bogota','contacto','telefono'],
         single_response=True
     )
     response(
         "Puedes estudiar en nuestra sede virtual. Línea nacional: 01 8000 110 666. Correo: aspirantes@ucompensar.edu.co. WhatsApp: (+57) 3173002952",
-        ['virtual', 'línea', 'correo'],
-        gif_url="https://tenor.com/es/view/giffany-gravity-falls-gif-sprite-book-of-bill-gif-12544109780257466418",
+        ['virtual', 'línea', 'correo','contacto','telefono','estudiar'],
         single_response=True
     )
     response(
-        "La Sede en Meta está ubicada en Sede Educación Cofrem, Carrera 35 No. 20A – 02, Villavicencio. Teléfono: 608 6818640. WhatsApp: (+57) 3173002952",
-        ['meta', 'villavicencio', 'sede', 'dirección'],
-        gif_url="https://tenor.com/es/view/giffany-gravity-falls-gif-sprite-book-of-bill-gif-12544109780257466418",
+        "La Sede en Meta está ubicada en Sede Educación Cofrem, Carrera 35 No. 20A - 02, Villavicencio. Teléfono: 608 6818640. WhatsApp: (+57) 3173002952",
+        ['meta', 'villavicencio', 'sede', 'dirección','telefono'],
         single_response=True
     )
     response(
         "Para el resto del país, puedes comunicarte al teléfono nacional 01 8000 110 666.",
-        ['país', 'teléfono', 'nacional'],
-        gif_url="https://tenor.com/es/view/giffany-gravity-falls-gif-sprite-book-of-bill-gif-12544109780257466418",
+        ['país', 'teléfono', 'nacional','contacto'],
         single_response=True
     )
     response(
         "Consulta la normatividad institucional en: https://ucompensar.edu.co/documentos-de-interes/",
         ['normatividad', 'institucional', 'consulta'],
-        gif_url="https://tenor.com/es/view/giffany-gravity-falls-gif-sprite-book-of-bill-gif-12544109780257466418",
         single_response=True
     )
     response(
         "Si cerraron el grupo en el que te matriculaste, puedes: a) Cursar otro programa o asignatura, b) Inscribir otra asignatura (con ajustes en el valor si corresponde), o c) Solicitar devolución del 100% del valor pagado. (Art. 7 de PAF)",
-        ['cerraron', 'grupo', 'matrícula'],
-        gif_url="https://tenor.com/es/view/giffany-gravity-falls-gif-sprite-book-of-bill-gif-12544109780257466418",
+        ['cerraron', 'grupo', 'matrícula','matriculé','matricule','cerro','cerró'],
         single_response=True
     )    
     response(
         "Puedes solicitar un segundo evaluador de tu nota. En primera instancia, pide revisión a tu docente; en segunda instancia, solicita formalmente en CRM que designen un evaluador alterno. (Art. 35 del RE)",
         ['segundo', 'evaluador', 'nota'],
-        gif_url="https://tenor.com/es/view/giffany-gravity-falls-gif-sprite-book-of-bill-gif-12544109780257466418",
         single_response=True
     )
     response(
         "Para inscribirte, ingresa y llena el formulario aquí: https://academico.ucompensar.edu.co:8091/academusoft/academico/inscripcionLineaBootstrap/ind_ins_pub_seguro.jsp?_gl=1*1nivft2*_gcl_au*MTY1NDQzMjUwOS4xNzMwODM0MDAx*_ga*NjQ1MjUyNzQ1LjE3MzA4MzM5NzQ.*_ga_XGQ6YMBJF1*MTczMDgzMzk3NC4xLjEuMTczMDgzNjM3Ni40MS4wLjA.",
-        ['inscribirme', 'formulario', 'inscripción', 'inscripcion', 'proceso', 'inscribo'],
-        gif_url="https://tenor.com/es/view/giffany-gravity-falls-gif-sprite-book-of-bill-gif-12544109780257466418",
+        ['inscribirme', 'formulario', 'inscripción', 'inscripcion', 'proceso', 'inscribo','matrícula','matricula','matricularme'],
         single_response=True
     )
     response(
         "Verifica tu estado de admisión tres días hábiles después de enviar los documentos. Consulta aquí: https://academico.ucompensar.edu.co:8091/academusoft/academico/inscripcionLinea4/consultaPublica/inicio.jsp?_gl=1*fzqthx*_gcl_au*MTY1NDQzMjUwOS4xNzMwODM0MDAx*_ga*NjQ1MjUyNzQ1LjE3MzA4MzM5NzQ.*_ga_XGQ6YMBJF1*MTczMDgzMzk3NC4xLjEuMTczMDgzNjU2Ni41OS4wLjA.",
-        ['estado', 'admisión', 'verificar'],
-        gif_url="https://tenor.com/es/view/giffany-gravity-falls-gif-sprite-book-of-bill-gif-12544109780257466418",
+        ['estado', 'admisión', 'verificar','admision'],
         single_response=True
     )
     response(
         "Nuestro número de teléfono para todo el país es: 01 8000 110 666",
         ['telefono', 'numero', 'contacto'],
-        gif_url="https://tenor.com/es/view/giffany-gravity-falls-gif-sprite-book-of-bill-gif-12544109780257466418",
         single_response=True
     )
     response(
+        "Ofrecemos una Beca del 75% para estudiantes nuevos, dirigida a estudiantes nuevos en programas de Técnico Laboral o Pregrado, también tenemos beca del 75% para estudiantes antiguos que ya cuenten con dicho beneficio, recibe más información y consulta requisitos en: consulta los requisitos en: https://ucompensar.edu.co/becas-compensar/ ",
+        ['becas', 'incentivos', 'beca', 'incentivo'],
+        single_response=True
+    )
+    response(
+        "Ingresa al campus virtual en: https://unipanamericanaeduco.sharepoint.com/Portal%20MiPana/SitePages/INICIOPORTAL.aspx"
+        ['campus', 'virtual',],
+        single_response=True
+    )
+    response(
+        "Consulta el calendario académico en: https://unipanamericanaeduco.sharepoint.com/Portal%20MiPana/SitePages/Calendario-Academico-2024-Estudiantes-VF.aspx"
+        ['calendario', 'académico', 'academico'],
+        single_response=True
+    )
+    response(
+        "Consultainformación sobre el nuevo campus en: https://nuevocampus.ucompensar.edu.co"
+        ['nuevo', 'campus'],
+        single_response=True
+    ) 
+    response(
         "Gracias por tu visita. ¡Que tengas un gran día!",
         ['adios', 'gracias', 'nos vemos'],
-        gif_url="https://tenor.com/es/view/giffany-gravity-falls-gif-sprite-book-of-bill-gif-12062962864236644735",
         single_response=True
     )
     
