@@ -141,7 +141,7 @@ def check_all_message(message):
         single_response=True
     )
     response(
-        "Nuestras publicaciones destacadas son: <ul> <li>Sistemas Logísticos en la comercialización de productos agrícolas basados en la industria 4.0</li> <li>Creatividad y Design Thinking</li></ul>",
+        "Nuestras publicaciones destacadas son: <ul> <li>Sistemas Logísticos en la comercialización de productos agrícolas basados en la industria 4.0</li> <li>Creatividad y Design Thinking</li> <li>Sostenibilidad del modelo empresarial verde</li> <li>Gestión del conocimiento</li> <li>Tendencias del mercado</li> </ul>",
         ['publicaciones','destacadas','importantes']
     )
     response(
