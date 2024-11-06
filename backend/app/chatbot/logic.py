@@ -4,7 +4,7 @@ import random
 def get_response(user_input):
     # La lógica completa de tu función de respuesta
     split_message = re.split(r'\s|[,:;.?!-_]\s*', user_input.lower())
-    response, gif_url = check_all_message(split_message)
+    response = check_all_message(split_message)
     if response == "":
         response = unknown()
     return {"response": response}
@@ -18,7 +18,7 @@ def message_probability(user_message, recognized_words, single_response=False, r
         if word in recognized_words:
             message_certainty += 1
     
-    percentage = float(message_certainty) / float(len(recognized_words))
+    percentage = float(message_certainty) / float(len(recognized_words)) if recognized_words else 0
     
     for word in required_words:
         if word not in user_message:
@@ -35,9 +35,9 @@ def check_all_message(message):
 
     highest_prob = {}
 
-    def response(bot_response, list_of_words, gif_url=None, single_response=False, required_words=[]):
+    def response(bot_response, list_of_words,  single_response=False, required_words=[]):
         nonlocal highest_prob
-        highest_prob[(bot_response, gif_url)] = message_probability(message, list_of_words, single_response, required_words)
+        highest_prob[bot_response] = message_probability(message, list_of_words, single_response, required_words)
 
     # Definición de respuestas posibles con URL de gifs
     response(
@@ -172,8 +172,7 @@ def check_all_message(message):
     )
     
     best_match = max(highest_prob, key=highest_prob.get)
-    response_text, gif_url = best_match
-    return response_text, gif_url or ""
+    return best_match if highest_prob[best_match] > 0 else ""
 
 
 def unknown():
