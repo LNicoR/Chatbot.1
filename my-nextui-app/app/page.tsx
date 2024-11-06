@@ -57,7 +57,7 @@ export default function Home() {
                   <div
                     className={`inline-block px-3 py-2 rounded-lg bg-gray-300 text-gray-800 break-words`}
                     style={{ maxWidth: "80%", wordWrap: "break-word" }}
-                    dangerouslySetInnerHTML={{ __html: message.text }} 
+                    
                   >
                     {message.text}
                   </div>
