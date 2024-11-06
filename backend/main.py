@@ -4,10 +4,17 @@ from app.api.endpoints import router as api_router
 
 app = FastAPI()
 
+origins = [
+    "http://localhost:3000",
+    "https://cbot-lemon.vercel.app",
+    "https://cbot-git-main-c4rlos9559s-projects.vercel.app",
+    "https://cbot-6kgnaeb9m-c4rlos9559s-projects.vercel.app",
+
+]
 # Configuración de CORS para permitir el frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://cbot-lemon.vercel.app/", "http:localhost:3000"], 
+    allow_origins=origins, 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
