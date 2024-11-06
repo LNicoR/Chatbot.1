@@ -168,17 +168,17 @@ def check_all_message(message):
         single_response=True
     )
     response(
-        "Ingresa al campus virtual en: https://unipanamericanaeduco.sharepoint.com/Portal%20MiPana/SitePages/INICIOPORTAL.aspx"
-        ['campus', 'virtual',],
+        "Ingresa al campus virtual en: https://unipanamericanaeduco.sharepoint.com/Portal%20MiPana/SitePages/INICIOPORTAL.aspx",
+        ['campus', 'virtual'],
         single_response=True
     )
     response(
-        "Consulta el calendario académico en: https://unipanamericanaeduco.sharepoint.com/Portal%20MiPana/SitePages/Calendario-Academico-2024-Estudiantes-VF.aspx"
+        "Consulta el calendario académico en: https://unipanamericanaeduco.sharepoint.com/Portal%20MiPana/SitePages/Calendario-Academico-2024-Estudiantes-VF.aspx",
         ['calendario', 'académico', 'academico'],
         single_response=True
     )
     response(
-        "Consultainformación sobre el nuevo campus en: https://nuevocampus.ucompensar.edu.co"
+        "Consultainformación sobre el nuevo campus en: https://nuevocampus.ucompensar.edu.co",
         ['nuevo', 'campus'],
         single_response=True
     ) 
