@@ -1,91 +1,132 @@
-"use client";
 
-import { useState } from "react";
-import axios from "axios";
-import { Snippet } from "@nextui-org/snippet";
-import { button as buttonStyles } from "@nextui-org/theme";
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
-  const [userMessage, setUserMessage] = useState("");
-  const [chatHistory, setChatHistory] = useState([]);
-
-  const sendMessage = async () => {
-    if (!userMessage) return;
-
-    try {
-      const response = await axios.post("http://localhost:8000/chat", { message: userMessage });
-      const botResponse = response.data;
-
-      setChatHistory((prevHistory) => [
-        ...prevHistory,
-        { sender: "user", text: userMessage },
-        { sender: "bot", text: botResponse.response, gifUrl: botResponse.gif_url },
-      ]);
-
-      setUserMessage(""); // Limpiar el input después de enviar
-    } catch (error) {
-      console.error("Error al enviar el mensaje:", error);
-    }
-  };
-
-  const handleKeyDown = (event) => {
-    if (event.key === "Enter") {
-      sendMessage();
-    }
-  };
-
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      {/* Campo de entrada de chat y botón */}
-      <div className="flex flex-col items-center mt-8 gap-4">
-        {/* Historial del chat */}
-        <div className="w-full max-w-lg bg-gray-100 rounded-lg p-4 mt-4">
-          {chatHistory.map((message, index) => (
-            <div
-              key={index}
-              className={`mb-4 ${message.sender === "user" ? "text-right" : "text-left"}`}
-            >
-              <div
-                className={`inline-block max-w-full px-3 py-2 rounded-lg ${
-                  message.sender === "user" ? "bg-blue-500 text-white" : "bg-gray-300 text-gray-800"
-                } break-words`}
-                style={{ maxWidth: "80%", wordWrap: "break-word" }}
-              >
-                {message.text}
-              </div>
-              {message.gifUrl && (
-                <img
-                  src={message.gifUrl}
-                  alt="GIF de respuesta del bot"
-                  className="w-32 h-32 mx-auto rounded-lg mt-2"
-                />
-              )}
-            </div>
-          ))}
-        </div>
-        <div className="flex w-full max-w-lg gap-2">
-          <input
-            type="text"
-            value={userMessage}
-            onChange={(e) => setUserMessage(e.target.value)}
-            placeholder="Escribe tu mensaje..."
-            className="w-full px-4 py-2 border rounded-md"
-            onKeyDown={handleKeyDown} // Manejador para enviar al presionar Enter
-          />
-          <button
-            onClick={sendMessage}
-            className={buttonStyles({ color: "primary", radius: "full", variant: "shadow" })}
-          >
-            Enviar
-          </button>
-        </div>
-      </div>
+    <div className={styles.container}>
+      <Head>
+        <title>Create Next App</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-      <div className="mt-8">
-        <Snippet hideCopyButton hideSymbol variant="bordered">
-          <span>Nancy Gomez | Yuly Molano | Carlos Diaz</span>
-        </Snippet>
-      </div>
-    </section>
+      <main>
+        <h1 className={styles.title}>
+          Welcome to <a href="https://nextjs.org">Next.js!</a>
+        </h1>
+
+        <p className={styles.description}>
+          Get started by editing <code>pages/index.js</code>
+        </p>
+
+        <div className={styles.grid}>
+          <a href="https://nextjs.org/docs" className={styles.card}>
+            <h3>Documentation &rarr;</h3>
+            <p>Find in-depth information about Next.js features and API.</p>
+          </a>
+
+          <a href="https://nextjs.org/learn" className={styles.card}>
+            <h3>Learn &rarr;</h3>
+            <p>Learn about Next.js in an interactive course with quizzes!</p>
+          </a>
+
+          <a
+            href="https://github.com/vercel/next.js/tree/canary/examples"
+            className={styles.card}
+          >
+            <h3>Examples &rarr;</h3>
+            <p>Discover and deploy boilerplate example Next.js projects.</p>
+          </a>
+
+          <a
+            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            className={styles.card}
+          >
+            <h3>Deploy &rarr;</h3>
+            <p>
+              Instantly deploy your Next.js site to a public URL with Vercel.
+            </p>
+          </a>
+        </div>
+      </main>
+
+      <footer>
+        <a
+          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Powered by{' '}
+          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
+        </a>
+      </footer>
+
+      <style jsx>{´´
+        main {
+          padding: 5rem 0;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        footer {
+          width: 100%;
+          height: 100px;
+          border-top: 1px solid #eaeaea;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        footer img {
+          margin-left: 0.5rem;
+        }
+        footer a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+          color: inherit;
+        }
+        code {
+          background: #fafafa;
+          border-radius: 5px;
+          padding: 0.75rem;
+          font-size: 1.1rem;
+          font-family:
+            Menlo,
+            Monaco,
+            Lucida Console,
+            Liberation Mono,
+            DejaVu Sans Mono,
+            Bitstream Vera Sans Mono,
+            Courier New,
+            monospace;
+        }
+      }</style>
+
+      <style jsx global>{
+        html,
+        body {
+          padding: 0;
+          margin: 0;
+          font-family:
+            -apple-system,
+            BlinkMacSystemFont,
+            Segoe UI,
+            Roboto,
+            Oxygen,
+            Ubuntu,
+            Cantarell,
+            Fira Sans,
+            Droid Sans,
+            Helvetica Neue,
+            sans-serif;
+        }
+        * {
+          box-sizing: border-box;
+        }
+      }</style>
+    </div>
   );
 }
