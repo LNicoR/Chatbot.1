@@ -13,7 +13,7 @@ export default function Home() {
     if (!userMessage) return;
 
     try {
-      const response = await axios.post("https://cbot-4iax.onrender.com/chat", { message: userMessage });
+      const response = await axios.post("http://localhost:8000/chat", { message: userMessage });
       const botResponse = response.data;
 
       setChatHistory((prevHistory) => [
