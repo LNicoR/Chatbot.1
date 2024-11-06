@@ -158,7 +158,7 @@ def check_all_message(message):
     )
     response(
         "Para inscribirte, ingresa y llena el formulario aquí: https://academico.ucompensar.edu.co:8091/academusoft/academico/inscripcionLineaBootstrap/ind_ins_pub_seguro.jsp?_gl=1*1nivft2*_gcl_au*MTY1NDQzMjUwOS4xNzMwODM0MDAx*_ga*NjQ1MjUyNzQ1LjE3MzA4MzM5NzQ.*_ga_XGQ6YMBJF1*MTczMDgzMzk3NC4xLjEuMTczMDgzNjM3Ni40MS4wLjA.",
-        ['inscribirme', 'formulario', 'inscripción', 'inscripcion', 'proceso'],
+        ['inscribirme', 'formulario', 'inscripción', 'inscripcion', 'proceso', 'inscribo'],
         gif_url="https://tenor.com/es/view/giffany-gravity-falls-gif-sprite-book-of-bill-gif-12544109780257466418",
         single_response=True
     )

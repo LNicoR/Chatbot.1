@@ -3,6 +3,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { Snippet } from "@nextui-org/snippet";
+import {Avatar} from "@nextui-org/react";
 import { button as buttonStyles } from "@nextui-org/theme";
 
 export default function Home() {
@@ -43,26 +44,42 @@ export default function Home() {
           {chatHistory.map((message, index) => (
             <div
               key={index}
-              className={`mb-4 ${message.sender === "user" ? "text-right" : "text-left"}`}
+              className={`mb-4 flex ${message.sender === "user" ? "justify-end" : "justify-start"}`}
             >
-              <div
-                className={`inline-block max-w-full px-3 py-2 rounded-lg ${
-                  message.sender === "user" ? "bg-blue-500 text-white" : "bg-gray-300 text-gray-800"
-                } break-words`}
-                style={{ maxWidth: "80%", wordWrap: "break-word" }}
-              >
-                {message.text}
-              </div>
-              {message.gifUrl && (
-                <img
-                  src={message.gifUrl}
-                  alt="GIF de respuesta del bot"
-                  className="w-32 h-32 mx-auto rounded-lg mt-2"
-                />
+              {message.sender === "bot" && (
+                <>
+                  {/* Avatar del bot a la izquierda del mensaje */}
+                  <img
+                    src="https://media.tenor.com/U4xFnwz-TtEAAAAj/giffany-gravity-falls.gif"
+                    alt="Avatar del bot"
+                    className="w-8 h-8 rounded-full mr-2"
+                  />
+                  <div
+                    className={`inline-block px-3 py-2 rounded-lg bg-gray-300 text-gray-800 break-words`}
+                    style={{ maxWidth: "80%", wordWrap: "break-word" }}
+                  >
+                    {message.text}
+                  </div>
+                </>
+              )}
+
+              {message.sender === "user" && (
+                <>
+                  {/* Mensaje del usuario con avatar a la derecha */}
+                  <div
+                    className="inline-block max-w-full px-3 py-2 rounded-lg bg-blue-500 text-white break-words"
+                    style={{ maxWidth: "80%", wordWrap: "break-word" }}
+                  >
+                    {message.text}
+                  </div>
+                  <Avatar showFallback src="https://images.unsplash.com/broken" className="ml-2" />
+                </>
               )}
             </div>
           ))}
         </div>
+
+
         <div className="flex w-full max-w-lg gap-2">
           <input
             type="text"
