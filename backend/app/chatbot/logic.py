@@ -60,49 +60,46 @@ def check_all_message(message):
     response(
         "¡Hola! ¿En qué puedo ayudarte hoy?",
         ['hola', 'saludos', 'buenas'],
-        gif_url="https://tenor.com/es/view/giffany-gravity-falls-gif-sprite-book-of-bill-gif-6020263351307620049",
+        single_response=True
+    )
+    response(
+        "Tenemos excelentes profesores en la institución pero Andrea Huertas es la mejor",
+        ['quien', 'quién', 'mejor', 'profesor', 'profesora'],
         single_response=True
     )
     response(
         "Nuestras facultades son: Facultad de Ingeniería, Escuela de Negocios y la Facultad de Ciencias Sociales y de la Educación, ¿Sobre cuál quieres conocer los programas?",
         ['facultades'],
-        gif_url="https://tenor.com/es/view/giffany-gravity-falls-gif-sprite-book-of-bill-gif-6020263351307620049",
         single_response=True
     )
     response(
         "La facultad de Ingeniería, cuenta con las siguientes programas: Ingeniería Multimedia (Pregrado-Bogotá), Ciencia de datos (Pregrado-Bogotá y Virtual), Ingeniería Industrial (Pregrado-Bogotá), Ingeniería de Telecomunicaciones (Pregrado-Bogotá y Meta), Ingeniería de Sistemas (Pregrado-Bogotá, Meta y Virtual), Ingeniería de Software (Pregrado-Bogotá y Virtual)",
         ['facultad', 'ingeniería','ingenieria', 'carreras', 'programas'],
-        gif_url="https://tenor.com/es/view/giffany-gravity-falls-gif-sprite-book-of-bill-gif-6020263351307620049",
         single_response=True
     )
     response(
         "La Escuela de Negocios, cuenta con los siguientes programas: Administración Financiera (Pregrado-Bogotá y Virtual), Contaduría Pública (Pregrado-Bogotá, Meta y Virtual), Finanzas y Negocios Internacionales (Pregrado-Bogotá y Virtual), Administración de Empresas (Pregrado-Bogotá y Virtual), Profesional en Negocios y Logística Internacional (Pregrado-Bogotá y Virtual), Administración de Servicios de Salud (Pregrado-Bogotá), Mercadeo y Publicidad (Pregrado-Bogotá y Virtual), Administración en Salud (Pregrado-Virtual)",
         ['facultad', 'escuela', 'negocios' , 'carreras', 'programas'],
-        gif_url="https://tenor.com/es/view/giffany-gravity-falls-gif-sprite-book-of-bill-gif-6020263351307620049",
         single_response=True
     )
     response(
         "La Facultad de Ciencias Sociales y de la Educación, cuenta con los siguientes programas: Licenciatura en Bilingüismo con Énfasis en Inglés (Pregrado-Bogotá y Meta), Licenciatura en Educación Infantil (Pregrado-Bogotá y Meta), Profesional en Lenguas (Pregrado-Bogotá y Virtual), Profesional en Deporte y Actividad Física (Pregrado-Bogotá), Diseño Visual (Pregrado-Bogotá y Virtual), Comunicación Social (Pregrado-Bogotá)",
         ['facultad', 'ciencias', 'sociales' , 'educación', 'carreras','programas'],
-        gif_url="https://tenor.com/es/view/giffany-gravity-falls-gif-sprite-book-of-bill-gif-6020263351307620049",
         single_response=True
     )
     response(
         "Tenemos diferentes programas ¿Cuál es de tu interés (pregrado/postgrado)?",
         ['programas', 'carreras'],
-        gif_url="https://tenor.com/es/view/giffany-gravity-falls-gif-sprite-book-of-bill-gif-6020263351307620049",
         single_response=True
     )
     response(
         "Nuestros programas de pregrado son: Ingeniería Multimedia (Pregrado-Bogotá), Ciencia de datos (Pregrado-Bogotá y Virtual), Ingeniería Industrial (Pregrado-Bogotá), Ingeniería de Telecomunicaciones (Pregrado-Bogotá y Meta), Ingeniería de Sistemas (Pregrado-Bogotá, Meta y Virtual), Ingeniería de Software (Pregrado-Bogotá y Virtual), Administración Financiera (Pregrado-Bogotá y Virtual), Contaduría Pública (Pregrado-Bogotá, Meta y Virtual), Finanzas y Negocios Internacionales (Pregrado-Bogotá y Virtual), Administración de Empresas (Pregrado-Bogotá y Virtual), Profesional en Negocios y Logística Internacional (Pregrado-Bogotá y Virtual), Administración de Servicios de Salud (Pregrado-Bogotá), Mercadeo y Publicidad (Pregrado-Bogotá y Virtual), Administración en Salud (Pregrado-Virtual), Licenciatura en Bilingüismo con Énfasis en Inglés (Pregrado-Bogotá y Meta), Licenciatura en Educación Infantil (Pregrado-Bogotá y Meta), Profesional en Lenguas (Pregrado-Bogotá y Virtual), Profesional en Deporte y Actividad Física (Pregrado-Bogotá), Diseño Visual (Pregrado-Bogotá y Virtual), Comunicación Social (Pregrado-Bogotá)",
         ['pregrado', 'carreras', 'programas'],
-        gif_url="https://tenor.com/es/view/giffany-gravity-falls-gif-sprite-book-of-bill-gif-6020263351307620049",
         single_response=True
     )
     response(
         "Tenemos diferentes programas de pregrado y postgrado en nuestras modalidades. ¿En qué modalidad estás interesado?",
         ['postgrado', 'carreras', 'programas'],
-        gif_url="https://tenor.com/es/view/giffany-gravity-falls-gif-sprite-book-of-bill-gif-6020263351307620049",
         single_response=True
     )
     response(
