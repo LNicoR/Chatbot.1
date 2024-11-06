@@ -5,21 +5,12 @@ def get_response(user_input):
     # La lógica completa de tu función de respuesta
     split_message = re.split(r'\s|[,:;.?!-_]\s*', user_input.lower())
     response, gif_url = check_all_message(split_message)
+    if response == "":
+        response = unknown()
     return {"response": response}
 
 def message_probability(user_message, recognized_words, single_response=False, required_words=[]):
-    """
-    Calcula la probabilidad de que un mensaje del usuario contenga palabras reconocidas.
-    
-    Args:
-    user_message (list): Lista de palabras del mensaje del usuario.
-    recognized_words (list): Palabras que el bot reconoce.
-    single_response (bool): Indica si se debe dar una respuesta única.
-    required_words (list): Lista de palabras requeridas para considerar el mensaje como válido.
-    
-    Returns:
-    int: Probabilidad en porcentaje de que el mensaje coincida con la respuesta esperada.
-    """
+
     message_certainty = 0
     has_required_words = True
     
@@ -41,15 +32,7 @@ def message_probability(user_message, recognized_words, single_response=False, r
 
 
 def check_all_message(message):
-    """
-    Evalúa todas las posibles respuestas y devuelve la mejor coincidencia junto con el gif asociado.
-    
-    Args:
-    message (list): Lista de palabras del mensaje del usuario.
-    
-    Returns:
-    tuple: Respuesta del bot y enlace del gif.
-    """
+
     highest_prob = {}
 
     def response(bot_response, list_of_words, gif_url=None, single_response=False, required_words=[]):
@@ -139,7 +122,7 @@ def check_all_message(message):
     )
     response(
         "Si cerraron el grupo en el que te matriculaste, puedes: a) Cursar otro programa o asignatura, b) Inscribir otra asignatura (con ajustes en el valor si corresponde), o c) Solicitar devolución del 100% del valor pagado. (Art. 7 de PAF)",
-        ['cerraron', 'grupo', 'matrícula','matriculé','matricule','cerro','cerró'],
+        ['cerraron', 'grupo', 'matrícula','matriculé','matricule','cerro','cerró',],
         single_response=True
     )    
     response(
@@ -149,7 +132,7 @@ def check_all_message(message):
     )
     response(
         "Para inscribirte, ingresa y llena el formulario aquí: https://academico.ucompensar.edu.co:8091/academusoft/academico/inscripcionLineaBootstrap/ind_ins_pub_seguro.jsp?_gl=1*1nivft2*_gcl_au*MTY1NDQzMjUwOS4xNzMwODM0MDAx*_ga*NjQ1MjUyNzQ1LjE3MzA4MzM5NzQ.*_ga_XGQ6YMBJF1*MTczMDgzMzk3NC4xLjEuMTczMDgzNjM3Ni40MS4wLjA.",
-        ['inscribirme', 'formulario', 'inscripción', 'inscripcion', 'proceso', 'inscribo','matrícula','matricula','matricularme'],
+        ['inscribirme', 'formulario', 'inscripción', 'inscripcion', 'proceso', 'inscribo','matrícula','matricula','matricularme','matriculo', 'matricular'],
         single_response=True
     )
     response(
