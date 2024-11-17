@@ -7,6 +7,6 @@ router = APIRouter()
 class UserInput(BaseModel):
     message: str
 
-@router.post("/chat")
+@router.post("/conect")
 async def chat(user_input: UserInput):
     return get_response(user_input.message)
