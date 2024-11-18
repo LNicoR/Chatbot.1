@@ -6,6 +6,7 @@ app = FastAPI()
 
 origins = [
     "http://localhost:3000",
+    "https://chatbot-1-brown.vercel.app",
 
 ]
 # Configuración de CORS para permitir el frontend
