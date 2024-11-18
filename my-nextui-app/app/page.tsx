@@ -14,7 +14,7 @@ export default function Home() {
     if (!userMessage) return;
 
     try {
-      const response = await axios.post("https://cbot-4iax.onrender.com/chat", { message: userMessage });
+      const response = await axios.post("https://chatbot-1-0nsa.onrender.com/conect", { message: userMessage });
       const botResponse = response.data;
 
       setChatHistory((prevHistory) => [
@@ -50,7 +50,7 @@ export default function Home() {
                 <>
                   {/* Avatar del bot a la izquierda del mensaje */}
                   <img
-                    src="https://media.tenor.com/U4xFnwz-TtEAAAAj/giffany-gravity-falls.gif"
+                    src="https://inbot.com.br/wp-content/uploads/2022/07/header-blog-chatbot-call-center-inbot.jpg"
                     alt="Avatar del bot"
                     className="w-8 h-8 rounded-full mr-2"
                   />
@@ -72,7 +72,7 @@ export default function Home() {
                   >
                     {message.text}
                   </div>
-                  <Avatar showFallback src="https://images.unsplash.com/broken" className="ml-2" />
+                  <Avatar showFallback src="https://static.vecteezy.com/system/resources/previews/006/713/490/non_2x/cartoon-style-minimal-user-icon-user-symbol-for-web-site-design-logo-app-ui-isolated-on-white-background-free-vector.jpg" className="ml-2" />
                 </>
               )}
             </div>
@@ -81,6 +81,12 @@ export default function Home() {
 
 
         <div className="flex w-full max-w-lg gap-2">
+        <button
+            onClick={sendMessage}
+            className={buttonStyles({ color: "success", radius: "full", variant: "shadow" })}
+          >
+            Enviar
+          </button>
           <input
             type="text"
             value={userMessage}
@@ -89,18 +95,13 @@ export default function Home() {
             className="w-full px-4 py-2 border rounded-md"
             onKeyDown={handleKeyDown} // Manejador para enviar al presionar Enter
           />
-          <button
-            onClick={sendMessage}
-            className={buttonStyles({ color: "primary", radius: "full", variant: "shadow" })}
-          >
-            Enviar
-          </button>
+
         </div>
       </div>
 
       <div className="mt-8">
         <Snippet hideCopyButton hideSymbol variant="bordered">
-          <span>Nancy Gomez | Yuly Molano | Carlos Diaz</span>
+          <span>Nicolás Linares Ramírez</span>
         </Snippet>
       </div>
     </section>

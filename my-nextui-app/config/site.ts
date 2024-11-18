@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "UCompensar-ChatBot",
+  name: "Algoritmos y Programación",
   description: "General information about UCompensar",
   navItems: [
     {
